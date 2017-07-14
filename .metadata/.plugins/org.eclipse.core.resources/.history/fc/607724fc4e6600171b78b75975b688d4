@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class HashTest {
+
+	public class Student{
+		private String no;
+		private String name;
+		private int age;
+		
+		public Student(String _no, String _name, int _age)
+		{
+			this.no = _no;
+			this.name = _name;
+			this.age = _age;
+		}
+	}
+}
