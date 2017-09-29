@@ -1,0 +1,13 @@
+package com.basicjava.abstractclass2;
+
+public abstract class StarCar {
+
+	public String color;
+	public String tire;
+	public int displacement;
+	public String Handle;
+	
+	public StarCar() {
+		// TODO Auto-generated constructor stub
+	}
+}
