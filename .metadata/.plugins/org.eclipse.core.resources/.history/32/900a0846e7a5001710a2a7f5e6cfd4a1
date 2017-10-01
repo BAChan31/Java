@@ -1,0 +1,8 @@
+package com.basicjava.interfaceEx1;
+
+public interface IFuntion {
+
+	public void callSenderRecive();
+	public void canLte();
+	public void tvRemoteController();
+}

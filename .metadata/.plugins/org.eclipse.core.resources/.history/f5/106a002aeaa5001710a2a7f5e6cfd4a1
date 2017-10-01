@@ -1,0 +1,5 @@
+package com.basicjava.interfaceEx2;
+
+public interface Airplane {
+
+}

@@ -1,0 +1,11 @@
+package com.basicjava.interfaceEx1;
+
+public class MainPart {
+
+	public static void main(String args[]){
+		
+		IFuntion aPhone = new PhoneA();
+		IFuntion bPhone = new PhoneB();
+		IFuntion cPhone = new PhoneC();
+	}
+}

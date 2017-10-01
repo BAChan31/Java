@@ -15,4 +15,6 @@ public abstract class StarCar {
 		this.displacement = displacement;
 		this.handle = handle;
 	}
+	
+	public abstract void getSpec();
 }
