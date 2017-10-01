@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
+<<<<<<< HEAD
 		<item value="901" key="DIALOG_X_ORIGIN"/>
 		<item value="157" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -8,6 +9,10 @@
 		<item value="true" key="actionSetFilter"/>
 		<item value="true" key="uncategorizedFilter"/>
 		<item value="true" key="internalFilter"/>
+=======
+		<item value="637" key="DIALOG_X_ORIGIN"/>
+		<item value="146" key="DIALOG_Y_ORIGIN"/>
+>>>>>>> 4b4b19a09e877b82c08cbdb1fce095b558d26bc4
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>

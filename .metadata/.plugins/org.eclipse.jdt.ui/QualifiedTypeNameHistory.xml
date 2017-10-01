@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.basicjava.abstractclass.StoreNum1"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.basicjava.abstractclass.HeadquarterStore"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="com.basicjava.abstractclass2.PriceTable"/>
 <fullyQualifiedTypeName name="com.basicjava.abstractclass2.StarCarHighGrade"/>
+=======
+<fullyQualifiedTypeName name="java.lang.System"/>
+>>>>>>> 4b4b19a09e877b82c08cbdb1fce095b558d26bc4
 </qualifiedTypeNameHistroy>

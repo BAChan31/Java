@@ -5,8 +5,13 @@ applyBackground=false
 approved.defs.file.last.changed.time=1499285043000
 eclipse.preferences.version=1
 iconcolormode=primary
+<<<<<<< HEAD
 last.download.attempt.time=1506871574680
 lastConfiguration=1.506527117779E12
+=======
+last.download.attempt.time=1506839490980
+lastConfiguration=1.50683947505E12
+>>>>>>> 4b4b19a09e877b82c08cbdb1fce095b558d26bc4
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray
