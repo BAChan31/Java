@@ -5,7 +5,11 @@ applyBackground=false
 approved.defs.file.last.changed.time=1499285043000
 eclipse.preferences.version=1
 iconcolormode=primary
+<<<<<<< HEAD
 last.download.attempt.time=1507114953386
+=======
+last.download.attempt.time=1507188270821
+>>>>>>> 8b789f69036cc19c91dc16f2a97f969194b35344
 lastConfiguration=1.506914612673E12
 newinstall=false
 showWelcomeDialog=false
