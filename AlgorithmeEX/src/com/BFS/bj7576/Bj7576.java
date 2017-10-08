@@ -57,21 +57,23 @@ public class Bj7576 {
 		
 		//검사부분 필요
 		
-		System.out.println(searchMaxCount(countGraph));
+		System.out.println(searchMaxCount(graph, countGraph));
 		
 	}
 	
-	public static int searchMaxCount(int[][] question) {
+	public static int searchMaxCount(int [][] condition, int[][] question) {
 		int max=0;
 		
-		for(int i=0; i< question.length; i++)
+		
+		for(int i=0; i< condition.length; i++)
 		{
-			for(int j=0; j< question[i].length; j++)
+			for(int j=0; j< condition[i].length; j++)
 			{
-				if(question[i][j] == 0)
+				if(condition[i][j] == 0)
 				{
 					return -1;
 				}
+				
 				if(max < question[i][j])
 					max=question[i][j];
 			}
