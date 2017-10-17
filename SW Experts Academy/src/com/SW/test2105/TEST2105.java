@@ -4,12 +4,10 @@ import java.util.Scanner;
 public class TEST2105 {
 	
 	public static final int[] moveX = {-1,-1,1,1};
-	public static final int[] moveY = {-1, 1,-1,1};
+	public static final int[] moveY = {-1, 1,1,-1};
 	public static final int STARTPOINT = 2;
 	public static final int CANVISIT = 1;
 	public static final int CANNOTVISIT = 0;
-//	public static int[][] GRAPH;
-//	public static int[][] CHECKEDGRAPH;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -17,6 +15,7 @@ public class TEST2105 {
 		int testCase = in.nextInt();
 		int[][] graph;
 		int[] resultArr = new int[testCase];
+		
 		while(testCase>0)
 		{
 			int caseNum = in.nextInt();
@@ -32,52 +31,80 @@ public class TEST2105 {
 			
 			foundBest(graph, caseNum);
 			
+			testCase--;
+			
 		}
 	}
 	
-	static void foundBest(int[][] GRAPH, int caseCount) {
+	static void foundBest(int[][] graph, int caseCount) {
 		int temp = 0;
 		int [][] visitGraph;
+
 		
+		//그래프별로 시작점 설정
 		for(int i=0; i<caseCount; i++)
 		{
 			for(int j=0; j<caseCount; j++)
 			{
+				boolean[] dessert = new boolean[101];
 				visitGraph = new int[caseCount][caseCount];
-				findWay(GRAPH, visitGraph, i, j, true);
+				Point startPoint = new Point(i,j);
+				findWay(graph, visitGraph, dessert, startPoint, i, j, true);
 			}
 		}
 		
 		System.out.println("dfdf");
 	}
 	
-	static boolean findWay(int[][] GRAPH, int[][] visit ,int pointX, int pointY, boolean start) {
+	static void findWay(int[][] adj, int[][] checkedGraph, boolean[] visitCafe ,Point current, int direction, int curveCount, boolean start) {
 		if(start)
 		{
-			visit[pointX][pointY] = 3;
+			checkedGraph[current.x][current.y] = STARTPOINT;
+			visitCafe[adj[current.x][current.y]] = true;
 		}
 		
 		for(int i=0; i<4; i++)
 		{
-			int nextX = pointX + moveX[i];
-			int nextY = pointY + moveY[i];
-			
-			if(nextX < 0 || nextY < 0 || nextX >= GRAPH.length || nextY >= GRAPH[pointX].length)
-				return false;
-			else if(visit[nextX][nextY] == 3)
-				return true;
-			else if(visit[nextX][nextY] == 1)
-				return false;
-			else
+			Point nextPoint = new Point(current.x,current.y);
+			nextPoint.x += moveX[i];
+			nextPoint.y += moveY[i];
+			if(start)
 			{
-				if(findWay(GRAPH, visit, nextX, nextY, false))
-				{
-					visit[nextX][nextY] = 2;
-				}
+				direction = i;
 			}
+			else if(direction != i)
+			{
+				direction = i;
+				curveCount ++;
+			}
+			
+			//for문 탈출조건
+			if(nextPoint.x < 0 || nextPoint.y < 0 || nextPoint.x >= adj.length || nextPoint.y >= adj[current.x].length)
+				continue;
+			if(checkedGraph[nextPoint.x][nextPoint.y]==STARTPOINT && curveCount == 3)
+				return;
+			if(visitCafe[adj[nextPoint.x][nextPoint.y]] == true)
+				continue;
+			if(curveCount > 3)
+				continue;
+			if(checkedGraph[nextPoint.x][nextPoint.y] == CANNOTVISIT && curveCount <= 3)
+			{
+				visitCafe[adj[nextPoint.x][nextPoint.y]] = true;
+				checkedGraph[nextPoint.x][nextPoint.y] = CANVISIT;
+				findWay(adj, checkedGraph, visitCafe, nextPoint, direction, curveCount, false);
+			}
+			
+			
 		}
-		
-		return false;				
 	}
+	
 
+	public static class Point {
+		int x,y;
+		public Point(int x, int y) {
+			// TODO Auto-generated constructor stub
+			this.x = x;
+			this.y = y;			
+		}
+	}
 }
