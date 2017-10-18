@@ -71,6 +71,7 @@ public class TEST2105 {
 			if(start)
 			{
 				direction = i;
+				curveCount = 0;
 			}
 			else if(direction != i)
 			{
@@ -81,17 +82,19 @@ public class TEST2105 {
 			//forπÆ ≈ª√‚¡∂∞«
 			if(nextPoint.x < 0 || nextPoint.y < 0 || nextPoint.x >= adj.length || nextPoint.y >= adj[current.x].length)
 				continue;
-			if(checkedGraph[nextPoint.x][nextPoint.y]==STARTPOINT && curveCount == 3)
+			if(curveCount > 3)
 				return;
 			if(visitCafe[adj[nextPoint.x][nextPoint.y]] == true)
 				continue;
-			if(curveCount > 3)
-				continue;
+			if(checkedGraph[nextPoint.x][nextPoint.y]==STARTPOINT && curveCount == 3)
+				return;
 			if(checkedGraph[nextPoint.x][nextPoint.y] == CANNOTVISIT && curveCount <= 3)
 			{
 				visitCafe[adj[nextPoint.x][nextPoint.y]] = true;
 				checkedGraph[nextPoint.x][nextPoint.y] = CANVISIT;
 				findWay(adj, checkedGraph, visitCafe, nextPoint, direction, curveCount, false);
+				visitCafe[adj[nextPoint.x][nextPoint.y]] = true;
+				checkedGraph[nextPoint.x][nextPoint.y] = CANNOTVISIT;
 			}
 			
 			
