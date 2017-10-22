@@ -35,13 +35,25 @@ public class Solution {
 					MAP[i][j] = turnelType[type];
 				}
 			}
-
+			findWay(pointR, pointC, timeL, RESULT);
 			System.out.println("#" + caseCount + " " + RESULT);
 		}
 	}
 	
 	static void findWay(int startX, int startY, int time, int resultValue) {
+		Queue<int[]> queue = new LinkedList<>();
+		queue.offer(new int[] {startX, startY, time});
+		VISIT[startX][startY]=true;
+		resultValue++;
 		
+		while(!queue.isEmpty())
+		{
+			int[] nextPoint = queue.poll();
+			int nextX = nextPoint[0];
+			int nextY = nextPoint[1];
+			
+			if(nextX<0 || nextY<0 || nextX>= MAP.length || nextY>= MAP[startY].length);
+		}
 	}
 	
 }
