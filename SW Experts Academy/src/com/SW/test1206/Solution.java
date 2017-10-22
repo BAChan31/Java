@@ -29,7 +29,6 @@ public class Solution {
 					totalCount += (apartment[i] - maxTop);
 				}
 			}
-			
 			System.out.println("#" + testCase + " " + totalCount );
 			testCase++;
 		}
