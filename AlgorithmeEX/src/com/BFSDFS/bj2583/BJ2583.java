@@ -9,7 +9,6 @@ public class BJ2583 {
 	public static int[] moveX = {1,-1,0,0};
 	public static int[] moveY = {0,0,1,-1};
 	public static int AREACOUNT = 0;
-	public static int[] COUNT = new int [100];
 	public static List<Integer> arr;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -109,5 +108,17 @@ public class BJ2583 {
 			this.y = y;
 		}
 	}
+	
+	/*public static class Point implements Comparable<Point>{
+	      int x, y;
+	      public Point(int x, int y){
+	         this.x = x;
+	         this.y =y ;
+	      }
+	      @Override
+	      public int compareTo(Point o) {
+	         return this.x - o.x; //작으면 -1, 같으면 0, 크면 1을 자동으로 반환시키는 방법
+	      }
+	   }*/
 
 }
