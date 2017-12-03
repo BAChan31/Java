@@ -1,4 +1,4 @@
-package com.bj1912;
+package com.BJ.bj1912;
 import java.util.*;
 
 public class BJ1912 {

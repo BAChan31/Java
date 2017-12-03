@@ -1,4 +1,4 @@
-package com.bj6603;
+package com.BJ.bj6603;
 import java.util.*;
 
 public class BJ6603 {
