@@ -1,4 +1,4 @@
-package com.BFSDFS.bj2667;
+package com.BJ.bj2667;
 import java.util.Scanner;
 
 

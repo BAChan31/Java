@@ -1,4 +1,4 @@
-package com.BFSDFS.bj11403;
+package com.BJ.bj11403;
 import java.util.*;
 
 public class BJ11403 {

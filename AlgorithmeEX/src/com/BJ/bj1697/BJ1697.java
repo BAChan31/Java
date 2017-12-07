@@ -1,4 +1,4 @@
-package com.BFS.bj1697;
+package com.BJ.bj1697;
 import java.util.*;
 
 public class BJ1697 {

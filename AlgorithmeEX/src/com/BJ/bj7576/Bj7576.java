@@ -1,4 +1,4 @@
-package com.BFS.bj7576;
+package com.BJ.bj7576;
 import java.util.*;
 
 public class Bj7576 {

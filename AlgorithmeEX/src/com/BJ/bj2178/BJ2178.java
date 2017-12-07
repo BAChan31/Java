@@ -1,4 +1,4 @@
-package com.BFS.bj2178;
+package com.BJ.bj2178;
 import java.util.*;
 
 public class BJ2178 {

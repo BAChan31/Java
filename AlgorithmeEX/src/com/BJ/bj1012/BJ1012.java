@@ -1,4 +1,4 @@
-package com.BFS.bj1012;
+package com.BJ.bj1012;
 import java.util.*;
 
 public class BJ1012 {

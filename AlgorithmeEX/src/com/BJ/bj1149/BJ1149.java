@@ -1,4 +1,4 @@
-package com.DP.bj1149;
+package com.BJ.bj1149;
 import java.util.Scanner;
 import java.math.*;
 

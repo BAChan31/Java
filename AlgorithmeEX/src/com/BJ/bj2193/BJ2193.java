@@ -1,4 +1,4 @@
-package com.DP.bj2193;
+package com.BJ.bj2193;
 import java.util.Scanner;
 public class BJ2193 {
 

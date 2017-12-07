@@ -1,4 +1,4 @@
-package com.DP.bj9095;
+package com.BJ.bj9095;
 import java.util.*;
 public class BJ9095 {
 

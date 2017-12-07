@@ -1,4 +1,4 @@
-package com.BFSDFS.bj1260;
+package com.BJ.bj1260;
 
 import java.util.*;
 
