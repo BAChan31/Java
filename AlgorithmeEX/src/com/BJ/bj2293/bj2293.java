@@ -14,7 +14,7 @@ public class bj2293 {
 			arr[i] = in.nextInt();
 		
 		dp[0] = 1;
-		for(int i=1; i<=coinCount; i++)
+		for(int i=1; i<=coinCount; i++)          
 		{
 			for(int j=arr[i]; j<=quest; j++)
 			{
